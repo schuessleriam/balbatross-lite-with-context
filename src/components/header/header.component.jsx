@@ -9,7 +9,7 @@ import { createStructuredSelector } from 'reselect';
 import { selectCartHidden } from "./../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "./../../redux/user/user.selectors";
 // import logo and styling
-import { ReactComponent as Logo } from "./../../assets/balbatross.svg";
+import { ReactComponent as Logo } from "./../../assets/balbatross-logo.svg";
 import "./header.styles.scss";
 // import project components
 import CartIcon from "./../cart-icon/cart-icon.component";
@@ -20,7 +20,7 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 const Header = ({ currentUser, hidden }) => (
     <div className="header">
         <Link className="logo-container" to="/">
-            <Logo className="logo"/>
+            <Logo/>
         </Link>
 
         <div className="options">

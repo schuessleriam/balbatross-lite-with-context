@@ -1,4 +1,4 @@
-export const COLLECTION_DATA = {
+const COLLECTION_DATA = {
 hats: {
     id: 1,
     title: 'Hats',
@@ -246,11 +246,4 @@ hats: {
     }
   }
 
-export const COLLECTION_ID_MAP = {
-  hats: 1,
-  sneakers: 2,
-  jackets: 3,
-  womens: 4,
-  mens: 5
-}
-
+export default COLLECTION_DATA;
