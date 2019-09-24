@@ -1,4 +1,3 @@
- 
 export const addItemToCart = (cartItems, itemToAdd) => {
      const isDuplicate = cartItems.find(cartItem => cartItem.id === itemToAdd.id);
 
@@ -32,4 +31,16 @@ export const addItemToCart = (cartItems, itemToAdd) => {
         
     }
 }
+
+export const calculateCartTotal = (cartItems) => {
+    return cartItems.reduce((accum, item) => accum+(item.price * item.quantity), 0);
+}
+
+export const clearItemFromCartArray = (cartItems, itemToClear) => {    
+    return cartItems.filter(cartItem => cartItem.id !== itemToClear.id);
+}
+
+export const selectCartItemsCount = cartItems => ( 
+    cartItems.reduce((accum, item) => accum+item.quantity, 0)
+);
 
